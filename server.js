@@ -19,7 +19,10 @@ app.use(express.json());
 
 // option 1 Allow all origins with default of cors(*)
 app.use(cors({
-  origin: 'http://localhost:5173' // Autoriser cette origine spécifique
+  origin: [
+    'http://localhost:5173', 
+    'https://backend-2-gender-lq0ljpfjp-yacinesinapayens-projects.vercel.app'
+  ] // Autoriser ces origines spécifiques
 }));
 
 // Routes
